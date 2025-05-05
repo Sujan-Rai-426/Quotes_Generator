@@ -10,12 +10,27 @@ body{
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f7fa;
     font-family: Arial, sans-serif;
+
+    background-color: #f5f7fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+
+body.dark {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+}
+
+.container.dark {
+    background-color: #2e2e42;
+    color: #e0e0e0;
+}
 
 /* Container for the entire quote section */
 .container {
@@ -57,7 +72,6 @@ body{
     font-style: italic;
     text-align: center;
     margin-bottom: 15px;
-    color: #333;
 }
 
 /* Author Styling */
@@ -65,7 +79,6 @@ body{
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #555;
 }
 
 /* Buttons Container */
