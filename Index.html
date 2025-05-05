@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <title>Quote Generator</title>
+</head>
+<body>
+
+
+    
+<!-- Container to show the quotes -->
+<div class="container">
+
+    <div class="dropdown">
+        <label><strong>Select Category:</strong></label><br>
+        <select id="categorySelect">
+            <option value="Science" selected>Science</option>
+        </select>
+    </div>
+
+    <div class="quote" id="quoteText">Loading...</div>
+    <div class="author" id="quoteAuthor"></div>
+
+    <div>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+</div>
+
+
+<!-- JavaSacripts link src -->
+    <script src="Theme_Toggle.js"></script>
+    <script src="Quote_Handel.js"></script>
+
+</body>
+</html>
