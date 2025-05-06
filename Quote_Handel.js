@@ -22,7 +22,7 @@ const quoteAuthor = document.getElementById('quoteAuthor');
 function displayQuote() {
     const quote = quotes[currCategory][currIndex];
     quoteText.textContent = `"${quote.quote}"`;
-    quoteAuthor.textContent = `${quote.author}`;
+    quoteAuthor.textContent = `-- ${quote.author} --`;
     
     // Disable the prev/next buttons based on index
     prevBtn.disabled = currIndex === 0;
