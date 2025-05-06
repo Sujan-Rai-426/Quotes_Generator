@@ -111,6 +111,21 @@ button:disabled {
     cursor: not-allowed;
 }
 
+
+/* increase or decrease the font size button  */
+.font-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.font-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+
+
 /* Responsive Design for smaller screens */
 @media (max-width: 600px) {
     .container {
