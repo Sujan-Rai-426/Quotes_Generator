@@ -15,25 +15,23 @@ const quotes = {
 let currCategory = "Science";
 let currIndex = 0;
 
-// DOM elements to display quotes
 const quoteText = document.getElementById('quoteText');
 const quoteAuthor = document.getElementById('quoteAuthor');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-
 
 // Function to display the current quote
 function displayQuote() {
     const quote = quotes[currCategory][currIndex];
     quoteText.textContent = `"${quote.quote}"`;
     quoteAuthor.textContent = `${quote.author}`;
-
+    
     // Disable the prev/next buttons based on index
     prevBtn.disabled = currIndex === 0;
     nextBtn.disabled = currIndex === quotes[currCategory].length - 1;
 }
 
-// Event listeners for next and previous buttons (similar to React's onClick)
+
+// Next button function
+const nextBtn = document.getElementById('nextBtn');
 nextBtn.addEventListener('click', () => {
     if (currIndex < quotes[currCategory].length - 1) {
         currIndex++;
@@ -41,6 +39,20 @@ nextBtn.addEventListener('click', () => {
     }
 });
 
+
+// Random button function
+const randomBtn = document.getElementById('randomBtn');
+randomBtn.addEventListener('click', () => {
+    const quotesArray = quotes[currCategory];
+    const randomIndex = Math.floor(Math.random() * quotesArray.length);
+    
+    currIndex = randomIndex;
+    displayQuote();          
+});
+
+
+// Previous button function
+const prevBtn = document.getElementById('prevBtn');
 prevBtn.addEventListener('click', () => {
     if (currIndex > 0) {
         currIndex--;
@@ -48,5 +60,5 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-// Call the display function to show the first quote
+
 displayQuote();
